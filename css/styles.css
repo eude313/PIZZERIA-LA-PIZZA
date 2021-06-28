@@ -6,24 +6,4 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    font-family: 'Kaushan Script', cursive;
-    background-color: rgba(0, 0, 0, 0.808);  
-}
-.top{
-    font-size: 30px;
-}
-.top-1{
-    margin-left: 18rem;
-}
 
-.top-2{
-    font-family: 'Carter One', cursive;
-    font-size: 50px;
-    color: gold;
-    text-decoration: none;
-}
-.nav-item{
-    margin-left: 3rem;
-}
- */
