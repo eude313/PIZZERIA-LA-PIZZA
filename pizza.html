@@ -62,3 +62,175 @@
     </div>
     <p class="para-2">Originally intended as a lifeline to shuttered bars and restaurants, takeaway<br> drinks became a welcome — needed? — taste of Pizzeria House-drinks</p>
  </div>
+ <form action="form-control" id="pizza-form" class="form">
+
+    <div class="name">
+        <input type="radio" id="personal" value="6"><span class="size">Delivery:ksh200</span>;
+        <input type="text" name="fullName" placeholder="Full Name" required>&emsp;
+        <input type="text" name="phoneNumber" placeholder="Phone Number" required>&emsp;
+        <input type="text" name="address" placeholder="Address" required>
+    </div>
+    <div class="container-fluid">
+        <div class="menu-flex soda">
+            <div class="soda-1">
+                <div>
+                    <img src="./images (7).jpeg" class="rounded" alt="...">
+                    <label for="Choose size" class="Number">Choose size</label><br>
+                    <select id="chooseSize" name="Choose size" class="form-control" form="infoForm" required>
+                        <option>Select size:</option>
+                        <option value="500" name="size">personal pizza @ KES 500</option>
+                        <option value="1000" name="size">Medium pizza @ KES 1000</option>
+                        <option value="1400" name="size">Large pizza @ KES 1400</option>
+                        <option value="1600" name="size">Extra Large pizza @ KES 1600</option>
+                    </select>
+                </div>
+            </div>
+            <div class="soda-1">
+                <img src="./images (8).jpeg" class="rounded" alt="...">
+                <div>
+                    <label for="Cheese Options" class="Number">Cheese Options</label><br>
+                    <select id="cheese" name="Cheese Options" class="form-control" form="infoForm" required>
+                        <option>Cheese Options:</option>
+                        <option value="Regular" name="cheese">Regular </option>
+                        <option value="No cheese" name="cheese">No cheese</option>
+                        <option value="Extra Cheese" name="cheese">Extra Cheese @ KES 300</option>
+                    </select>
+                </div>
+            </div>
+            <div class="soda-1">
+                <img src="./images.jpeg"  class="rounded"  alt="...">
+                <div>
+                    <label for="Crust Selection" class="Number">Crust Selection</label><br>
+                    <select id="crust" name="Crust Selection" class="form-control" form="infoForm" required>
+                        <option>Crust Selection:</option>
+                        <option value="Plain Crust" name="crust"> Plain Crust </option>
+                        <option value="Garlic Butter Crust" name="crust">Garlic Butter Crust</option>
+                        <option value="Cheese Stuffed Crust" name="crust">Cheese Stuffed Crust (KES300)</option>
+                        <option value="Spicy Crust" name="crust">Spicy Crust </option>
+                        <option value="House Special Crust" name="crust">House Special Crust</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="container-fluid">
+        <div class="menu-flex form">
+            <div class="tabs">
+                <label for="Sauce Selection" class="Number">Sauce Selection</label><br>
+                <select id="sauce" name="Sauce Selection" class="form-control" form="infoForm" required>
+                    <option>Sauce Selection:</option>
+                    <option value="No Sauce" name="sauce">No Sauce</option>
+                    <option value="Marinara Sauce" name="sauce"> Marinara Sauce</option>
+                    <option value="White Sauce" name="sauce">White Sauce </option>
+                    <option value="Barbeque Sauce" name="sauce">Barbeque Sauce</option>
+                </select>
+            </div>
+            <div class="tabs">
+                <label for="Meat Toppings" class="Number">Meat Toppings</label><br>
+                <select id="meatToppings" name="Meat Toppings" class="form-control" form="infoForm" required>
+                    <option>Meat Toppings:</option>
+                    <option value="Pepperoni" name="meatToppings">Pepperoni</option>
+                    <option value="Sausage" name="meatToppings">Sausage</option>
+                    <option value="Canadian Bacon" name="meatToppings">Canadian Bacon </option>
+                    <option value="Ground Beef" name="meatToppings">Ground Beef </option>
+                    <option value="Anchovy" name="meatToppings">Anchovy</option>
+                    <option value="Chicken" name="meatToppings">Chicken</option>
+                </select>
+            </div>
+        <div class="tabs">
+                <label for="Veggie Toppings" class="Number">Veggie Toppings</label><br>
+                <select id="veggieToppings" name="Veggie Toppings" class="form-control" form="infoForm" required>
+                    <option>Veggie Toppings:</option>
+                    <option value="Tomatoes" name="veggieToppings">Tomatoes</option>
+                    <option value="Onions" name="veggieToppings">Onions</option>
+                    <option value="Olives" name="veggieToppings">Olives</option>
+                    <option value="Green Peppers" name="veggieToppings">Green Peppers </option>
+                    <option value="Mushrooms" name="veggieToppings">Mushrooms</option>
+                    <option value="Pineapple" name="veggieToppings">Pineapple</option>
+                    <option value="Spinach " name="veggieToppings">Spinach </option>
+                    <option value="Jalapeno" name="veggieToppings">Jalapeno</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="pizzaNumber">
+        <label for="number" id="danger">Number Of Pizza's</label>
+        <input class="form-control" type="number" value="" id="pizzaNumber">
+    </div>
+    <div class="order">
+        <button type="button" class="btn btn-danger" id="makeOrder">Make an Order</button>
+    </div>
+    <p id="calc">
+
+    </p>
+</form>
+<footer class="text-center text-white" style="background-color: #f1f1f1;">
+    <!-- Grid container -->
+    <div class="container pt-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <!-- Github -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+</footer>
