@@ -21,3 +21,39 @@ element.style {
 .menu-flex{
     display: flex;
 }
+.top{
+    font-size: 30px;
+}
+.top-1{
+    margin-left: 18rem;
+}
+
+.top-2{
+    font-family: 'Carter One', cursive;
+    font-size: 50px;
+    color: gold;
+    text-decoration: none;
+}
+.nav-item{
+    margin-left: 3rem;
+}
+.carousel-item {
+    height: 90vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+.head{
+    font-size: 50px;
+    text-shadow: 4px 3px 3px black;
+    font-family: 'Carter One', cursive;
+    color: gold;
+}
+#wan{
+    font-size: 30px;
+    text-shadow: 4px 3px 3px black;
+}
