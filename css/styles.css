@@ -1,9 +1,23 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    font-family: 'Kaushan Script', cursive;
+    background-color: rgba(0, 0, 0, 0.808);
+    background-image: url(./texture-gradient-simple-background-blue-wallpaper-preview.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.bg-light {
+    background-color: #949494 !important;
+}
+element.style {
+    background-color: #6d8694;
+}
+.menu-flex{
+    display: flex;
+}
