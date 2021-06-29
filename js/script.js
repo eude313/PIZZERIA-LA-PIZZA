@@ -1,126 +1,50 @@
-// $(document).ready( function (){
-    var delivery = 200;
-    var crustPrice = document.getElementById('chooseSize').value;
-    document.getElementById('chooseSize').innerHTML = crustPrice;
-
-
-
-
-
-
-
-
-
-
-
-    // function calculate(){
-    //     var crustPrice, cheesePrice, saucePrice, meatToppingsPrice, veggieToppingsPrice;
-    //     var newPrice;
-    //     var totalPrice;
-    //     if(chooseSize=='personal pizza @ KES 500'){
-    //         newPrice=500;
-    //     }else if(chooseSize=='Medium pizza @ KES 1000'){
-    //         newPrice=1000;
-    //     }else if(chooseSize=='Large pizza @ KES 1400'){
-    //         newPrice=1400;
-    //     }else if(chooseSize=='Extra Large pizza @ KES 1600'){
-    //         newPrice=1600;
-    //     }if(cheese=='Regular'){
-    //         cheesePrice=newPrice+0;
-    //     }else if(cheese=='No cheese'){
-    //         cheesePrice=newPrice+0;
-    //     }else if(cheese=='Extra Cheese @ KES 300'){
-    //         cheesePrice=newPrice+300;
-    //     }if (crust=='Plain Crust'){
-    //         crustPrice=newPrice+0;
-    //     }else if(crust=='Garlic Butter Crust'){
-    //         crustPrice=newPrice +0;
-    //     }else if(crust=='Cheese Stuffed Crust (KES300)'){
-    //         crustPrice=newPrice+300;
-    //     }else if(crust=='Spicy Crust '){
-    //         crustPrice=newPrice+0;
-    //     }else if(crust=='House Special Crust'){
-    //         crustPrice=newPrice+0;
-    //     }if (sauce=='No Sauce'){
-    //         saucePrice=newPrice+0;
-    //     }else if (sauce=='Marinara Sauce'){
-    //         saucePrice=newPrice+0;
-    //     }else if (sauce=='White Sauce'){
-    //         saucePrice=newPrice+0;
-    //     }else if (sauce=='Barbeque Sauce'){
-    //         saucePrice=newPrice+0;
-    //     }if (meatToppings=='Pepperoni'){
-    //         meatToppingsPrice=newPrice+0;
-    //     }else if (meatToppings=='Sausage'){
-    //         meatToppingsPrice=newPrice+0;
-    //     }else if (meatToppings=='Canadian Bacon'){
-    //         meatToppingsPrice=newPrice+0;
-    //     }else if (meatToppings=='Ground Beef'){
-    //         meatToppingsPrice=newPrice+0;
-    //     }else if (meatToppings=='Anchovy'){
-    //         meatToppingsPrice=newPrice+0;
-    //     }else if (meatToppings=='Chicken'){
-    //         meatToppingsPrice=newPrice+0;
-    //     }if (veggieToppings=='Tomatoes'){
-    //         veggieToppingsPrice=newPrice+0;
-    //     }else if (veggieToppings=='Onions'){
-    //         veggieToppingsPrice=newPrice+0;
-    //     }else if (veggieToppings=='Olives'){
-    //         veggieToppingsPrice=newPrice+0;
-    //     }else if (veggieToppings=='Green Peppers'){
-    //         veggieToppingsPrice=newPrice+0;
-    //     }else if (veggieToppings=='Mushrooms'){
-    //         veggieToppingsPrice=newPrice+0;
-    //     }else if (veggieToppings=='Pineapple'){
-    //         veggieToppingsPrice=newPrice+0;
-    //     }else if (veggieToppings=='Spinach'){
-    //         veggieToppingsPrice=newPrice+0;
-    //     }else if (veggieToppings=='Jalapeno'){
-    //         veggieToppingsPrice=newPrice+0;
-    //     }
-    //     totalPrice= (crustPrice+saucePrice+meatToppingsPrice+meatToppingsPrice+cheesePrice)*pizzaNumber;
-    //     return totalPrice;
-    // }
-//     var orderPrice= calculate();
-//     totalCost = totalCost + delivery;
-//     if($('#personal').is(":checked")){
-//         alert(name +" order will be delivered at " + address+ ".We will contact you through" + phone);
-//     }
-// });
-
-
-
-
-
-
-
-// $(document).ready (function(){ 
-//     $('#makeOrder').click(function(event){
-//         event.preventDefault();
-//         function calm(a){
-//             $(document).ready(function(){
-//                 if (a == ""){
-//                     alert("fill form correctly!");
-//                 }
-//             });
-           
-//         }
-//         calm($('#chooseSize'));
-//         calm($('#cheese'));
-//         calm($('##crust'));
-//         calm($('#sauce'));
-//         calm($('#meatToppings'));
-//         calm($('#veggieToppings'));
-
-//         chooseSize= $('#chooseSize').val();
-//         cheese= $("#cheese").val();
-//         crust= $("#crust").val();
-//         sauce= $("#sauce").val();
-//         meatToppings= $("#meatToppings").val();
-//         veggieToppings= $("#veggieToppings").val();
+$(document).ready(function(){
+    var form = document.getElementById('pizza-form');
+    var result = document.getElementById('result');
     
-//     });
+    form.onsubmit = function(e) {//SUBMIT FUNCTION
+      e.preventDefault();//prevents from showing input in url  
+    var sizePrice=parseInt($('input:radio[name=size]:checked').val());
+    var size = $('input:radio[name=size]:checked').attr("id");
+    var cheesePrice=parseInt($('input:radio[name=cheese]:checked').val());
+    var cheese = $('input:radio[name=cheese]:checked').attr("id"); 
+    var crustPrice=parseInt($('input:radio[name=crust]:checked').val());
+    var crust = $('input:radio[name=crust]:checked').attr("id");   
+    var sauce = $('input:radio[name=sauce]:checked').attr("id");  
+    //appends all checked meat toppings ids to allmeat arr
+    var allMeat = [];
+      $('input:checkbox[name=meat]:checked').each(function() {
+        allMeat.push($(this).attr("id"));
+      }); 
+    //counts items in allmeat toppings arr and subtracts 1 (for free complimentary topping) if there is 1+topping
+    var meatPrice;
+      if (allMeat.length>0){
+        meatPrice=allMeat.length-1;
+      }else{
+        meatPrice=0;
+        allMeat="None";
+      }
+    // VEGGIE TOPPING LOGIC SAME AS MEAT TOPPING LOGIC
+    var allVeggies = [];
+      $('input:checkbox[name=veggies]:checked').each(function() {
+        allVeggies.push($(this).attr("id"));
+      }); 
+    var veggiePrice;
+      if (allVeggies.length>0){
+        veggiePrice=allVeggies.length-1;
+      }else{
+        veggiePrice=0;
+        allVeggies="None";
+      } 
+    var total = sizePrice + cheesePrice + crustPrice + veggiePrice + meatPrice;  
+    
+    if(!size || !cheese || !crust || !sauce){
+      alert('Please complete your order');
+    }else{   
+      $("#pizza-form").hide();
+      result.innerHTML= form.fullName.value + "<br>" + form.phoneNumber.value + "<br>" + form.address.value + "<br><br>" +  size + " Pizza &emsp; KES" + sizePrice + "00 <br>" + cheese + " Cheese &emsp; KES" + cheesePrice + "00 <br>" + crust + " Crust &emsp; KES" + crustPrice  + "00 <br>" + sauce + " Sauce &emsp; KES0 <br> Meat Toppings &emsp; KES" + meatPrice + "00 <br> (" + allMeat + ") <br> Veggie Toppings &emsp; KES" + veggiePrice + "00 <br> (" + allVeggies + ") <br> Total &emsp; KES" + total + "00";
+      form.reset();//clears answers from input fields when you submit
+    }
+   };
+});
 
-// });
-
-// console.log( calculate() );

@@ -29,12 +29,9 @@
             <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
-            <li class="nav-item">
-            <a class="nav-link" href="pizza.html">Pizza</a>
-            </li>
             </ul>
             </div>
-            <a href="#"><button type="button" class="btn btn-warning">ORDER NOW</button></a>
+            <a href="#Order"><button type="button" class="btn btn-warning">ORDER NOW</button></a>
         </div>
     </nav>
    <!-- header -->
@@ -111,10 +108,73 @@
         </a>
    </div>
     
-
-
-
+<!-- forms -->
+<div class="container-fluid text-center">
+  <div class="orders">
+  <div id="Order">
+      <h5 id="hub" class="head">PIZZERIA LA PIZZA</h5><br>
+   
+      <p id="result"> </p>
+         
+      <form id="pizza-form">
+      <input type="text" name="fullName" placeholder="Full Name" required>&emsp;
+      <input type="text" name="phoneNumber" placeholder="Phone Number" required>&emsp;
+      <input type="text" name="address" placeholder="Address" required>
+    <br> <br>
+      
+      <h5 class="head">Choose a size:</h5>
+      <input type="radio" name="size" id="Personal" value="6"><span class="veggie">  KES600 Personal pizza &emsp</span>;
+      <input type="radio" name="size" id="Medium" value="10"> <span class="veggie">KES1000 Medium pizza &emsp </span> ;
+      <input type="radio" name="size" id="Large" value="14"><span class="veggie"> KES1400 Large pizza &emsp </span>  ;
+      <input type="radio" name="size" id="Extra-Large" value="16"><span class="veggie"> KES1600 Extra Large pizza  </span>  <br><br>
+    
+     <h5 class="head">Cheese Options:</h5>
+      <input type="radio" name="cheese" id="Regular" value="0"><span class="veggie">Regular &emsp </span>  ;
+      <input type="radio" name="cheese" id="No" value="0"><span class="veggie"> No cheese &emsp</span>  ;
+      <input type="radio" name="cheese" id="Extra" value="3"><span class="veggie">   Extra Cheese (KES300) </span> <br><br>   
+    
+    <h5 class="head">Crust Selection</h5>
+      <input type="radio" name="crust" id="Plain" value="0"><span class="veggie">  Plain Crust &emsp</span> ;
+      <input type="radio" name="crust" id="Garlic-Butter" value="0"><span class="veggie"> Garlic Butter Crust &emsp </span> ;
+      <input type="radio" name="crust" id="Cheese-Stuffed" value="3"> <span class="veggie">Cheese Stuffed Crust (KES300) &emsp </span>  ;
+      <input type="radio" name="crust" id="Spicy" value="0"><span class="veggie"> Spicy Crust &emsp </span>  ;
+      <input type="radio" name="crust" id="House-Special" value="0"> <span class="veggie"> House Special Crust </span><br><br>
+    
+    <h5 class="head">Sauce Selection</h5>
+      <input type="radio" name="sauce" id="No" value="0"> <span class="veggie"> No Sauce&emsp</span> ;
+      <input type="radio" name="sauce" id="Marinara" value="0"><span class="veggie"> Marinara Sauce &emsp</span>  ;
+      <input type="radio" name="sauce" id="White" value="0"><span class="veggie"> White Sauce &emsp </span>  ;
+      <input type="radio" name="sauce" id="Barbeque" value="0"> <span class="veggie">  Barbeque Sauce</span> <br><br>
         
+    <h5 class="head">Meat Toppings:</h5>   
+    <p>The first meat topping is free and each additional meat topping is KES100</p>
+    <input type="checkbox" name="meat" id=" Pepperoni" value="1"><span class="veggie">  Pepperoni &emsp</span> ;
+      <input type="checkbox" name="meat" id=" Sausage" value="1"><span class="veggie"> Sausage &emsp </span> ;
+      <input type="checkbox" name="meat" id=" Canadian-Bacon" value="1"><span class="veggie">  Canadian Bacon &emsp</span>  ;
+      <input type="checkbox" name="meat" id=" Ground-Beef" value="1"><span class="veggie"> Ground Beef &emsp </span>  ;
+      <input type="checkbox" name="meat" id=" Anchovy" value="1"><span class="veggie">  Anchovy &emsp</span> ;
+      <input type="checkbox" name="meat" id=" Chicken" value="1"><span class="veggie">  Chicken  </span><br><br>
+     
+    <h5 class="head">Veggie Toppings:</h5>  
+    <p>The first veggie topping is free and each additional veggies topping is KES100. </p>
+    <input type="checkbox" name="veggies" id=" Tomatoes" value="1"><span class="veggie">Tomatoes &emsp </span>;
+    <input type="checkbox" name="veggies" id=" Onions" value="1"><span class="veggie">   Onions &emsp</span>;
+    <input type="checkbox" name="veggies" id=" Olives" value="1"><span class="veggie">   Olives &emsp </span>;
+     <input type="checkbox" name="veggies" id=" Green-Peppers" value="1"><span class="veggie">  Green Peppers &emsp </span> ;
+      <input type="checkbox" name="veggies" id=" Mushrooms" value="1"><span class="veggie">  Mushrooms &emsp </span>;
+      <input type="checkbox" name="veggies" id=" Pineapple" value="1"><span class="veggie">  Pineapple &emsp </span>;
+      <input type="checkbox" name="veggies" id=" Spinach" value="1"><span class="veggie">    Spinach &emsp</span>;
+      <input type="checkbox" name="veggies" id=" Jalapeno" value="1"><span class="veggie">Jalapeno </span>     <br><br>  
+        
+      <input type="submit" value="Submit"class="btn btn-warning">
+        
+    </form> 
+    </div>
+      
+    </div>  
+</div>
+
+
 
 
 
