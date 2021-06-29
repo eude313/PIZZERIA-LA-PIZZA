@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="./7fc067e242fed5b27d00295a9efc9c08-removebg-preview.png" type="icon">
+    <link rel="icon" href="./images/7fc067e242fed5b27d00295a9efc9c08-removebg-preview.png" type="icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -14,7 +14,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
       <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>PIZZERIA LA DRINKS</title>
 </head>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -42,10 +42,7 @@
                 <a class="active drink-nav" aria-current="page" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                <a class="drink-nav" href="snacks.html">Snacks</a>
-                </li>
-                <li class="nav-item">
-                <a class="drink-nav" href="drinks.html">Drinks</a>
+                <a class="drink-nav" href="pizza.html">Pizza</a>
                 </li>
                 </ul>
             <!-- Left links -->
@@ -74,19 +71,19 @@
             <div class="menu-flex soda">
                 <div class="soda-1">
                     <div>
-                        <img src="./images (7).jpeg" class="rounded" alt="...">
+                        <img src="./images/images (3).jpeg" class="rounded" alt="...">
                         <label for="Choose size" class="Number">Choose size</label><br>
                         <select id="chooseSize" name="Choose size" class="form-control" form="infoForm" required>
                             <option>Select size:</option>
                             <option value="500" name="size">personal pizza @ KES 500</option>
-                            <option value="1000" name="size">Medium pizza @ KES 1000</option>
+                            <option value="1000"  name="size">Medium pizza @ KES 1000</option>
                             <option value="1400" name="size">Large pizza @ KES 1400</option>
                             <option value="1600" name="size">Extra Large pizza @ KES 1600</option>
                         </select>
                     </div>
                 </div>
                 <div class="soda-1">
-                    <img src="./images (8).jpeg" class="rounded" alt="...">
+                    <img src="./images/images (5).jpeg" class="rounded" alt="...">
                     <div>
                         <label for="Cheese Options" class="Number">Cheese Options</label><br>
                         <select id="cheese" name="Cheese Options" class="form-control" form="infoForm" required>
@@ -98,7 +95,7 @@
                     </div>
                 </div>
                 <div class="soda-1">
-                    <img src="./images.jpeg"  class="rounded"  alt="...">
+                    <img src="./images/images.jpeg"  class="rounded"  alt="...">
                     <div>
                         <label for="Crust Selection" class="Number">Crust Selection</label><br>
                         <select id="crust" name="Crust Selection" class="form-control" form="infoForm" required>
@@ -159,7 +156,7 @@
             <input class="form-control" type="number" value="" id="pizzaNumber">
         </div>
         <div class="order">
-            <button type="button" class="btn btn-danger" id="makeOrder">Make an Order</button>
+            <button type="button" class="btn btn-danger" onclick="makeOrder" id="makeOrder">Make an Order</button>
         </div>
         <p id="calc">
 
@@ -252,6 +249,6 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="./js/script.js"></script> 
+    <script src="../js/script.js"></script> 
 </body>
 </html>

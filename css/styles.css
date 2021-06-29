@@ -9,7 +9,7 @@
 body{
     font-family: 'Kaushan Script', cursive;
     background-color: rgba(0, 0, 0, 0.808);
-    background-image: url(./texture-gradient-simple-background-blue-wallpaper-preview.jpg); 
+    background-image: url("../images/10881763.jpg"); 
     background-repeat: no-repeat;
     background-size: cover; 
 }
